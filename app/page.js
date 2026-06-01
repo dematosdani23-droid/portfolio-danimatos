@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // ██  EDITE AQUI  ████████████████████████████████████████████████████████
@@ -190,18 +190,93 @@ function Hr(){return <div style={{borderTop:`1px solid ${C.bord}`}}/>;}
 // ── LIGHTBOX ──────────────────────────────────────────────────────────────────
 function Lightbox({photos,index,onClose}){
   const[cur,setCur]=useState(index);
+  const[loaded,setLoaded]=useState(false);
+  const touchX=useRef(null);
   if(!photos.length)return null;
-  const prev=()=>setCur(i=>(i-1+photos.length)%photos.length);
-  const next=()=>setCur(i=>(i+1)%photos.length);
+  const prev=()=>{setLoaded(false);setCur(i=>(i-1+photos.length)%photos.length);};
+  const next=()=>{setLoaded(false);setCur(i=>(i+1)%photos.length);};
+
+  // keyboard navigation
+  useEffect(()=>{
+    const onKey=e=>{
+      if(e.key==="ArrowLeft")prev();
+      else if(e.key==="ArrowRight")next();
+      else if(e.key==="Escape")onClose();
+    };
+    window.addEventListener("keydown",onKey);
+    return()=>window.removeEventListener("keydown",onKey);
+  },[cur]);
+
+  // touch/swipe
+  const onTouchStart=e=>{ touchX.current=e.touches[0].clientX; };
+  const onTouchEnd=e=>{
+    if(touchX.current===null)return;
+    const dx=e.changedTouches[0].clientX-touchX.current;
+    if(Math.abs(dx)>50){ dx<0?next():prev(); }
+    touchX.current=null;
+  };
+
+  const ArrowBtn=({dir,onClick})=>{
+    const[h,sH]=useState(false);
+    return(
+      <button onClick={e=>{e.stopPropagation();onClick();}}
+        onMouseEnter={()=>sH(true)} onMouseLeave={()=>sH(false)}
+        style={{position:"fixed",top:"50%",transform:"translateY(-50%)",
+          [dir==="prev"?"left":"right"]:"20px",
+          width:52,height:52,borderRadius:"50%",
+          background:h?"rgba(255,255,255,.15)":"rgba(255,255,255,.07)",
+          border:"1px solid rgba(255,255,255,.2)",
+          color:"#fff",fontSize:26,cursor:"pointer",
+          display:"flex",alignItems:"center",justifyContent:"center",
+          transition:"background .2s",zIndex:1001,lineHeight:1}}>
+        {dir==="prev"?"‹":"›"}
+      </button>
+    );
+  };
+
   return(
-    <div onClick={onClose} style={{position:"fixed",inset:0,background:"rgba(0,0,0,.95)",zIndex:999,display:"flex",alignItems:"center",justifyContent:"center"}}>
-      <div onClick={e=>e.stopPropagation()} style={{position:"relative",maxWidth:"90vw",maxHeight:"90vh",display:"flex",alignItems:"center",gap:16}}>
-        {photos.length>1&&<button onClick={prev} style={{position:"absolute",left:-50,background:"none",border:`1px solid ${C.bord}`,color:C.txt,width:40,height:40,borderRadius:"50%",cursor:"pointer",fontSize:18}}>‹</button>}
-        <img src={photos[cur]} alt="" style={{maxWidth:"85vw",maxHeight:"85vh",borderRadius:8,objectFit:"contain"}}/>
-        {photos.length>1&&<button onClick={next} style={{position:"absolute",right:-50,background:"none",border:`1px solid ${C.bord}`,color:C.txt,width:40,height:40,borderRadius:"50%",cursor:"pointer",fontSize:18}}>›</button>}
-        <button onClick={onClose} style={{position:"absolute",top:-44,right:0,background:"none",border:"none",color:C.mut,fontSize:28,cursor:"pointer"}}>×</button>
-        {photos.length>1&&<div style={{position:"absolute",bottom:-32,left:"50%",transform:"translateX(-50%)",color:C.mut,fontSize:12}}>{cur+1} / {photos.length}</div>}
+    <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}
+      style={{position:"fixed",inset:0,background:"rgba(0,0,0,.97)",zIndex:1000,
+        display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
+
+      {/* top bar */}
+      <div style={{position:"fixed",top:0,left:0,right:0,height:56,
+        display:"flex",alignItems:"center",justifyContent:"space-between",
+        padding:"0 24px",background:"rgba(0,0,0,.6)",zIndex:1001}}>
+        <span style={{color:"rgba(255,255,255,.5)",fontSize:13}}>
+          {cur+1} <span style={{color:"rgba(255,255,255,.25)"}}>/</span> {photos.length}
+        </span>
+        <button onClick={onClose}
+          style={{background:"none",border:"1px solid rgba(255,255,255,.15)",
+            color:"rgba(255,255,255,.6)",width:36,height:36,borderRadius:"50%",
+            cursor:"pointer",fontSize:20,display:"flex",alignItems:"center",
+            justifyContent:"center",lineHeight:1}}>×</button>
       </div>
+
+      {/* image */}
+      <div onClick={onClose} style={{width:"100vw",height:"100vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
+        <img key={cur} src={photos[cur]} alt="" onLoad={()=>setLoaded(true)}
+          onClick={e=>e.stopPropagation()}
+          style={{maxWidth:"88vw",maxHeight:"86vh",objectFit:"contain",
+            borderRadius:4,opacity:loaded?1:0,transition:"opacity .25s",
+            userSelect:"none",WebkitUserSelect:"none"}}/>
+      </div>
+
+      {/* arrows */}
+      {photos.length>1&&<><ArrowBtn dir="prev" onClick={prev}/><ArrowBtn dir="next" onClick={next}/></>}
+
+      {/* dot indicators */}
+      {photos.length>1&&photos.length<=12&&(
+        <div style={{position:"fixed",bottom:20,left:"50%",transform:"translateX(-50%)",
+          display:"flex",gap:6,zIndex:1001}}>
+          {photos.map((_,i)=>(
+            <div key={i} onClick={e=>{e.stopPropagation();setLoaded(false);setCur(i);}}
+              style={{width:i===cur?20:7,height:7,borderRadius:99,cursor:"pointer",
+                background:i===cur?"#c9a84c":"rgba(255,255,255,.25)",
+                transition:"all .2s"}}/>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
