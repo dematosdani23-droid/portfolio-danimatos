@@ -13,22 +13,22 @@ const PROFILE = "/fotos/perfil.jpg";
 
 const PROJECTS = [
   {
-    id:"dmva", title:"Donde Me Voy a Encontrar", year:"2026", cat:"direcao",
+    id:"dmva", title:"Donde Me Voy a Encontrar", year:"2025/2026", cat:"direcao",
     roles:["Direção","Edição","Produção"],
-    desc:{pt:"Curta-metragem Documentário. Co-direção com Mariana Pinheiro de Oliveira e Conter. Em produção para festivais brasileiros e argentinos.",es:"Cortometraje documental Co-dirección con Mariana Pinheiro de Oliveira y Conter. En Producción por festivales brasileños y argentinos."},
-    synopsis:{pt:"Danillo, Marina e Conter sairam das suas raizes para a mesma cidade, com três trajetórias diferentes de deslocamento. Onde a gente se encontra quando deixou pra trás o lugar de onde veio?",es:"Danillo, Marina y Conter dejaron sus raíces para ir a la misma ciudad, siguiendo tres caminos diferentes. ¿Dónde nos encontramos cuando dejamos atrás el lugar de donde venimos?"}, ytUrl:"1BRTiwk5n2I", photos:["/fotos/DMVE1.jpg", "/fotos/DMVE2.jpg"],
+    desc:{pt:"Documentário curta-metragem . Co-direção com Mariana Pinheiro de Oliveira e Valentina Conter. Em circulação por festivais brasileiros e argentinos.",es:"Cortometraje de ficción. Co-dirección con Mariana Pinheiro de Oliveira y Valentina Conter. En circulación por festivales brasileños y argentinos."},
+    synopsis:{pt:"",es:""}, ytUrl:"1BRTiwk5n2I", photos:["/fotos/DMVE1.jpg", "/fotos/DMVE2.jpg"],
   },
   {
     id:"ese", title:"El Secreto de los Estradas", year:"2025", cat:"direcao",
     roles:["Direção","Edição","Dir. de Som"],
     desc:{pt:"Curta de terror. Direção, edição e direção de som.",es:"Cortometraje de terror. Dirección, edición y dirección de sonido."},
-    synopsis:{pt:"Em busca de silêncio, um jovem se refugia em um apartamento vazio. Entre passos vindos do andar de cima, vozes distantes e sons que desafiam a lógica, sua tentativa de encontrar paz acaba revelando algo muito mais perturbador do que o próprio passado.",es:"En busca de silencio, un joven se refugia en un apartamento vacío. Entre pasos en el piso de arriba, voces lejanas y sonidos que desafían la lógica, su intento por encontrar la paz termina revelando algo mucho más perturbador que su propio pasado."}, ytUrl:"GHcos5H0YtM", photos:["/fotos/SDLE1.jpg", "/fotos/SDLE2.jpg", "/fotos/SDLE3.jpg"],
+    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
   },
   {
     id:"cds", title:"La Cita de Samer", year:"2025", cat:"direcao",
     roles:["Direção","Montagem","Sound Design"],
     desc:{pt:"Curta de ficção. Direção, montagem e sound design.",es:"Cortometraje de ficción. Dirección, montaje y sound design."},
-    synopsis:{pt:"",es:""}, ytUrl:"m9IGtmChsxg", photos:["/fotos/CITA1.jpg","/fotos/CITA2.jpg","/fotos/CITA3.jpg","/fotos/CITA4.jpg" ],
+    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
   },
   {
     id:"ced", title:"¿Qué Estamos Discutiendo?", year:"2024", cat:"direcao",
@@ -404,26 +404,6 @@ function ProjectPage({p,lang,onBack}){
   );
 }
 
-// ── CTILE ────────────────────────────────────────────────────────────────────
-function CTile({icon,label,value,href}){
-  const[h,sH]=useState(false);
-  const Tag=href?"a":"div";
-  return(
-    <Tag href={href} target="_blank" rel="noopener"
-      onMouseEnter={()=>sH(true)} onMouseLeave={()=>sH(false)}
-      style={{background:C.card,border:`1px solid ${h&&href?C.acc+"66":C.bord}`,
-        borderRadius:10,padding:"15px 18px",textDecoration:"none",
-        display:"flex",gap:12,alignItems:"flex-start",
-        transition:"border-color .2s",cursor:href?"pointer":"default",minWidth:180}}>
-      <span style={{fontSize:20}}>{icon}</span>
-      <div>
-        <div style={{color:C.mut,fontSize:10.5,fontWeight:600,marginBottom:3,letterSpacing:.5}}>{label}</div>
-        <div style={{color:C.txt,fontSize:12.5,fontWeight:500}}>{value}</div>
-      </div>
-    </Tag>
-  );
-}
-
 // ── MAIN ─────────────────────────────────────────────────────────────────────
 export default function Portfolio(){
   const[lang,setLang]=useState("pt");
@@ -444,7 +424,7 @@ export default function Portfolio(){
         justifyContent:"space-between",height:50}}>
         <span onClick={()=>setActive(null)}
           style={{color:C.acc,fontWeight:800,fontSize:12.5,letterSpacing:2.5,cursor:"pointer"}}>
-          DANI MATOS
+          KINESTESIA
         </span>
         <div style={{display:"flex",alignItems:"center",gap:4}}>
           {activeProject?(
@@ -587,15 +567,37 @@ export default function Portfolio(){
           <section id="contato" style={{maxWidth:840,margin:"0 auto",padding:"52px 24px 80px"}}>
             <SHead>{t.contato}</SHead>
             <div style={{marginTop:22,display:"flex",gap:12,flexWrap:"wrap"}}>
-              <CTile icon="✉️" label={t.email} value="danillo.assuncao@gmail.com" href="mailto:danillo.assuncao@gmail.com"/>
-              <CTile icon="💬" label={t.whatsapp} value="(61) 98228-6913" href="https://wa.me/5561982286913"/>
-              <CTile icon="🏢" label={t.empresa} value="Kinestesia Producciones Audiovisuales"/>
+              {[
+                {icon:"✉️",l:t.email,v:"danillo.assuncao@gmail.com",href:"mailto:danillo.assuncao@gmail.com"},
+                {icon:"💬",l:t.whatsapp,v:"(61) 98228-6913",href:"https://wa.me/5561982286913"},
+                {icon:"🏢",l:t.empresa,v:"Kinestesia Producciones Audiovisuales"},
+              ].map(({icon,l,v,href})=>{
+                const[h,sH]=useState(false);
+                const Tag=href?"a":"div";
+                return(
+                  <Tag key={l} href={href} target="_blank" rel="noopener"
+                    onMouseEnter={()=>sH(true)} onMouseLeave={()=>sH(false)}
+                    style={{background:C.card,
+                      border:`1px solid ${h&&href?C.acc+"66":C.bord}`,
+                      borderRadius:10,padding:"15px 18px",textDecoration:"none",
+                      display:"flex",gap:12,alignItems:"flex-start",
+                      transition:"border-color .2s",
+                      cursor:href?"pointer":"default",minWidth:180}}>
+                    <span style={{fontSize:20}}>{icon}</span>
+                    <div>
+                      <div style={{color:C.mut,fontSize:10.5,fontWeight:600,
+                        marginBottom:3,letterSpacing:.5}}>{l}</div>
+                      <div style={{color:C.txt,fontSize:12.5,fontWeight:500}}>{v}</div>
+                    </div>
+                  </Tag>
+                );
+              })}
             </div>
           </section>
 
           <footer style={{borderTop:`1px solid ${C.bord}`,padding:"18px 24px",
             textAlign:"center",color:"#2b2b2b",fontSize:10.5,letterSpacing:1,fontWeight:700}}>
-            DANI MATOS · BRASÍLIA / LA PLATA · {new Date().getFullYear()}
+            KINESTESIA PRODUCCIONES AUDIOVISUALES · BRASÍLIA / LA PLATA · {new Date().getFullYear()}
           </footer>
         </>
       )}
