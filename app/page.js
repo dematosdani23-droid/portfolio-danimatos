@@ -39,7 +39,7 @@ const PROJECTS = [
   {
     id:"lav", title:"A Lavanderia", year:"2026", cat:"som",
     roles:["Dir. de Som","Microfonista","Sound Design"],
-    desc:{pt:"Academia do Cinema — Imersão Audiovisual 2026. Direção de som completa.",es:"Academia do Cinema — Inmersión Audiovisual 2026. Dirección de sonido completa."},
+    desc:{pt:"Em produção",es:"En Producción"},
     synopsis:{pt:"Um homem entra numa lavanderia para fazer uma tarefa rotineira, mas tudo muda quando um segredo obscuro vem à tona. Preso num ciclo temporal, ele precisa enfrentar as consequências daquilo que tenta esconder, repetidamente.",es:"Un hombre entra a una lavandería para hacer una tarea cotidiana, pero todo cambia cuando un oscuro secreto sale a la luz. Atrapado en un bucle temporal, deberá enfrentar una y otra vez las consecuencias de aquello que intenta ocultar."}, ytUrl:"", photos:["/fotos/LAV1.jpeg","/fotos/LAV2.jpeg","/fotos/LAV3.jpeg" ],
   },
   {
@@ -51,20 +51,15 @@ const PROJECTS = [
   {
     id:"ps", title:"Pequeña Simone", year:"2024", cat:"som",
     roles:["Dir. de Som","Sound Design"],
-    desc:{pt:"Curta de ficção. Diretor de som e sound designer.",es:"Cortometraje de ficción. Director de sonido y sound designer."},
+    desc:{pt:"Curta de ficção. Diretor de som e sound designer. Em produção",es:"Cortometraje de ficción. Director de sonido y sound designer. Em Producción"},
     synopsis:{pt:"Uma menina que interpreta tudo literalmente transforma as conversas entre sua mãe e sua tia em um universo de fantasias, onde a imaginação dá novos sentidos às situações mais comuns do dia a dia.",es:"Pequeña Simone es una niña que toma todo de manera literal. Mientras comparte un día cotidiano con su madre y su tía, las conversaciones de los adultos cobran vida en su imaginación, convirtiendo situaciones comunes en aventuras fantásticas, absurdas y divertidas. Entre malentendidos y descubrimientos, Simone construye su propia forma de entender el mundo que la rodea."}, ytUrl:"", photos:["/fotos/SIMONE1.jpg","/fotos/SIMONE2.jpg","/fotos/SIMONE3.jpg","/fotos/SIMONE4.jpg", "/fotos/SIMONE5.jpg"],
   },
   {
     id:"tn", title:"Turno da Noite", year:"2026", cat:"som",
     roles:["Microfonista"],
-    desc:{pt:"Microfonista de som direto.",es:"Microfonista de sonido directo."},
-    synopsis:{pt:"Em Produção",es:"En Producción"}, ytUrl:"", photos:[],
-  },
-  {
-    id:"bvc", title:"Brujas, Viejas y Chorras", year:"2026", cat:"som",
-    roles:["Microfonista"],
-    desc:{pt:"Microfonista de som direto.",es:"Microfonista de sonido directo."},
-    synopsis:{pt:"Em Produção",es:"En Producción"}, ytUrl:"", photos:[],
+    desc:{pt:"Microfonista de som direto. Em produção",es:"Microfonista de sonido directo. En producción"},
+    // synopsis:{pt:"Em um plantão noturno, uma médica acompanha um paciente em estado crítico. Conforme a noite avança e um novo colega se junta à equipe, acontecimentos incomuns começam a desafiar sua percepção da realidade.",es:"Durante su turno de noche, una doctora atiende a un paciente en estado crítico. A medida que avanza la noche y una nueva compañera se une al equipo, una serie de sucesos inusuales comienzan a poner a prueba su percepción de la realidad."},
+	ytUrl:"", photos:["/fotos/TURNO1.jpg","/fotos/TURNO2.jpg","/fotos/TURNO3.jpg","/fotos/TURNO4.jpg", "/fotos/TURNO5.JPG" ],
   },
   {
     id:"siah", title:"Acervo Cacique Siã HuniKuin", year:"2026", cat:"producao",
@@ -76,19 +71,22 @@ const PROJECTS = [
     id:"min", title:"MINUSTAH, Haiti", year:"Em produção", cat:"producao",
     roles:["Co-Direção","Produção Executiva"],
     desc:{pt:"Documentário sobre a missão da ONU no Haiti (2004–2017). Target: IDFA / Hot Docs.",es:"Documental sobre la misión de la ONU en Haití (2004–2017). Target: IDFA / Hot Docs."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    synopsis:{pt:"",es:""}, ytUrl:"", photos:["/fotos/MINUSTAH1.JPG"],
   },
   {
     id:"vpl", title:"Voy a Perder la Cabeza por tu Amor", year:"2025–2026", cat:"outros",
     roles:["Projeção","Edição"],
     desc:{pt:"Teatro. Chefe de projeção no Resolume Arena e editor.",es:"Teatro. Jefe de proyección en Resolume Arena y editor."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    synopsis:{pt:"",es:""},   ytUrls: [
+    "atztovgdVM4",
+    "6WzS78lnXCE",
+    "Zvh01PVITJw",], photos:["/fotos/TERCA1.jpg","/fotos/TERCA2.jpg","/fotos/TERCA3.jpg","/fotos/TERCA4.jpg","/fotos/TERCA5.jpg","/fotos/TERCA6.jpg","/fotos/TERCA7.jpg"  ],
   },
   {
     id:"pen", title:"Penumbra", year:"2025", cat:"outros",
     roles:["Dir. de Fotografia"],
     desc:{pt:"Curta. Diretor de fotografia.",es:"Cortometraje. Director de fotografía."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    synopsis:{pt:"Em meio à investigação de um assassinato que o consome, um detetive recebe a visita de uma velha amiga. O que começa como uma conversa sobre o caso se transforma em uma noite marcada por suspeitas, silêncios e confrontos sutis, onde a busca pela verdade ameaça expor segredos cuidadosamente ocultos.",es:"En medio de una investigación de asesinato que lo absorbe por completo, un detective recibe la visita de un viejo amigo. Lo que comienza como una conversación sobre el caso se transforma en una noche marcada por la sospecha, los silencios y los sutiles enfrentamientos, donde la búsqueda de la verdad amenaza con sacar a la luz secretos cuidadosamente ocultos."}, ytUrl:"tOWDvcCqV-4", photos:["/fotos/PENUMBRA1.jpg","/fotos/PENUMBRA2.jpg","/fotos/PENUMBRA3.jpg" ],
   },
   {
     id:"hcn", title:"Homenagem Cine Noir", year:"2024", cat:"outros",
@@ -332,20 +330,29 @@ function ProjectPage({p,lang,onBack}){
       </div>
 
       {/* vídeo */}
-      {vid&&(
-        <div style={{marginBottom:48}}>
-          <SHead>{t.video}</SHead>
-          <div style={{marginTop:16,position:"relative",paddingTop:"56.25%",
+     {(()=>{
+  const ids=(p.ytUrls?.length?p.ytUrls:(p.ytUrl?[p.ytUrl]:[])).map(getYTId).filter(Boolean);
+  if(!ids.length)return null;
+  return(
+    <div style={{marginBottom:48}}>
+      <SHead>{t.video}</SHead>
+      <div style={{display:"flex",flexDirection:"column",gap:20,marginTop:16}}>
+        {ids.map((id,i)=>(
+          <div key={i} style={{position:"relative",paddingTop:"56.25%",
             borderRadius:10,overflow:"hidden",background:"#000"}}>
             <iframe
               style={{position:"absolute",top:0,left:0,width:"100%",height:"100%"}}
-              src={`https://www.youtube.com/embed/${vid}`}
-              title={p.title} frameBorder="0"
+              src={`https://www.youtube.com/embed/${id}`}
+              title={`${p.title}${ids.length>1?" — "+(i+1):""}`}
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen/>
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+    </div>
+  );
+})()}
 
       {/* sinopse */}
       {p.synopsis[lang]&&(
