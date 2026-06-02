@@ -350,7 +350,7 @@ function ProjectPage({p,lang,onBack}){
 })()}
 
       {/* sinopse */}
-      {p.synopsis[lang]&&(
+      {p.synopsis?.[lang]&&(
         <div style={{marginBottom:48}}>
           <SHead>{t.sinopse}</SHead>
           <p style={{color:C.txt,fontSize:13.5,lineHeight:1.9,marginTop:16,whiteSpace:"pre-wrap"}}>
