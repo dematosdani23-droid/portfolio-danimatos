@@ -40,7 +40,7 @@ const PROJECTS = [
     id:"lav", title:"A Lavanderia", year:"2026", cat:"som",
     roles:["Dir. de Som","Microfonista","Sound Design"],
     desc:{pt:"Academia do Cinema — Imersão Audiovisual 2026. Direção de som completa.",es:"Academia do Cinema — Inmersión Audiovisual 2026. Dirección de sonido completa."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    synopsis:{pt:"Um homem entra numa lavanderia para fazer uma tarefa rotineira, mas tudo muda quando um segredo obscuro vem à tona. Preso num ciclo temporal, ele precisa enfrentar as consequências daquilo que tenta esconder, repetidamente.",es:"Un hombre entra a una lavandería para hacer una tarea cotidiana, pero todo cambia cuando un oscuro secreto sale a la luz. Atrapado en un bucle temporal, deberá enfrentar una y otra vez las consecuencias de aquello que intenta ocultar."}, ytUrl:"", photos:["/fotos/LAV1.jpeg","/fotos/LAV2.jpeg","/fotos/LAV3.jpeg" ],
   },
   {
     id:"ph", title:"Poco Heterodoxo", year:"2025", cat:"som",
@@ -52,19 +52,19 @@ const PROJECTS = [
     id:"ps", title:"Pequeña Simone", year:"2024", cat:"som",
     roles:["Dir. de Som","Sound Design"],
     desc:{pt:"Curta de ficção. Diretor de som e sound designer.",es:"Cortometraje de ficción. Director de sonido y sound designer."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    synopsis:{pt:"Uma menina que interpreta tudo literalmente transforma as conversas entre sua mãe e sua tia em um universo de fantasias, onde a imaginação dá novos sentidos às situações mais comuns do dia a dia.",es:"Pequeña Simone es una niña que toma todo de manera literal. Mientras comparte un día cotidiano con su madre y su tía, las conversaciones de los adultos cobran vida en su imaginación, convirtiendo situaciones comunes en aventuras fantásticas, absurdas y divertidas. Entre malentendidos y descubrimientos, Simone construye su propia forma de entender el mundo que la rodea."}, ytUrl:"", photos:["/fotos/SIMONE1.jpg","/fotos/SIMONE2.jpg","/fotos/SIMONE3.jpg","/fotos/SIMONE4.jpg", "/fotos/SIMONE5.jpg"],
   },
   {
     id:"tn", title:"Turno da Noite", year:"2026", cat:"som",
     roles:["Microfonista"],
     desc:{pt:"Microfonista de som direto.",es:"Microfonista de sonido directo."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    synopsis:{pt:"Em Produção",es:"En Producción"}, ytUrl:"", photos:[],
   },
   {
     id:"bvc", title:"Brujas, Viejas y Chorras", year:"2026", cat:"som",
     roles:["Microfonista"],
     desc:{pt:"Microfonista de som direto.",es:"Microfonista de sonido directo."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    synopsis:{pt:"Em Produção",es:"En Producción"}, ytUrl:"", photos:[],
   },
   {
     id:"siah", title:"Acervo Cacique Siã HuniKuin", year:"2026", cat:"producao",
