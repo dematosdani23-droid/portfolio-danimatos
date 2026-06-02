@@ -67,12 +67,7 @@ const PROJECTS = [
     desc:{pt:"Digitalização e curadoria de acervo histórico audiovisual indígena amazônico.",es:"Digitalización y curaduría de archivo histórico audiovisual indígena amazónico."},
     synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
   },
-  {
-    id:"min", title:"MINUSTAH, Haiti", year:"Em produção", cat:"producao",
-    roles:["Co-Direção","Produção Executiva"],
-    desc:{pt:"Documentário sobre a missão da ONU no Haiti (2004–2017). Target: IDFA / Hot Docs.",es:"Documental sobre la misión de la ONU en Haití (2004–2017). Target: IDFA / Hot Docs."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:["/fotos/MINUSTAH1.JPG"],
-  },
+
   {
     id:"vpl", title:"Voy a Perder la Cabeza por tu Amor", year:"2025–2026", cat:"outros",
     roles:["Projeção","Edição"],
