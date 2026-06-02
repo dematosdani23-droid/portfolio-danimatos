@@ -59,7 +59,7 @@ const PROJECTS = [
     roles:["Microfonista"],
     desc:{pt:"Microfonista de som direto. Em produção",es:"Microfonista de sonido directo. En producción"},
     // synopsis:{pt:"Em um plantão noturno, uma médica acompanha um paciente em estado crítico. Conforme a noite avança e um novo colega se junta à equipe, acontecimentos incomuns começam a desafiar sua percepção da realidade.",es:"Durante su turno de noche, una doctora atiende a un paciente en estado crítico. A medida que avanza la noche y una nueva compañera se une al equipo, una serie de sucesos inusuales comienzan a poner a prueba su percepción de la realidad."},
-	ytUrl:"", photos:["/fotos/TURNO1.jpg","/fotos/TURNO2.jpg","/fotos/TURNO3.jpg","/fotos/TURNO4.jpg", "/fotos/TURNO5.JPG" ],
+	ytUrl:"", photos:["/fotos/TURNO1.jpg","/fotos/TURNO2.jpg","/fotos/TURNO3.jpg","/fotos/TURNO4.jpg", "/fotos/TURNO5.jpg" ],
   },
   {
     id:"siah", title:"Acervo Cacique Siã HuniKuin", year:"2026", cat:"producao",
