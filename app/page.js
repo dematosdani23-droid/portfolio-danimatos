@@ -28,13 +28,13 @@ const PROJECTS = [
     id:"cds", title:"La Cita de Samer", year:"2025", cat:"direcao",
     roles:["Direção","Montagem","Sound Design"],
     desc:{pt:"Curta de ficção. Direção, montagem e sound design.",es:"Cortometraje de ficción. Dirección, montaje y sound design."},
-    synopsis:{pt:"",es:""}, ytUrl:"m9IGtmChsxg", photos:["/fotos/CITA1.jpg","/fotos/CITA2.jpg","/fotos/CITA3.jpg","/fotos/CITA4.jpg" ],
+    synopsis:{pt:"Enquanto aguarda uma consulta médica em uma sala de espera aparentemente comum, Samer começa a perder contato com a realidade. Nas alucinações e a crescente sensação de perseguição, ele mergulha em um surto psicótico que transforma um espaço em um labirinto de medo e confusão.",es:"Mientras espera su cita con el médico en una sala de espera aparentemente normal, Samer comienza a perder el contacto con la realidad. Entre alucinaciones y una creciente sensación de persecución, se sumerge en un episodio psicótico que transforma el lugar en un laberinto de miedo y confusión."}, ytUrl:"m9IGtmChsxg", photos:["/fotos/CITA1.jpg","/fotos/CITA2.jpg","/fotos/CITA3.jpg","/fotos/CITA4.jpg" ],
   },
   {
     id:"ced", title:"¿Qué Estamos Discutiendo?", year:"2024", cat:"direcao",
     roles:["Direção","Montagem","Som Direto"],
     desc:{pt:"Curta de ficção. Direção, montagem e som direto.",es:"Cortometraje de ficción. Dirección, montaje y sonido directo."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    synopsis:{pt:"Acompanhando o percurso cotidiano de um estudante até a universidade pública, o documentário-ensaio atravessa um cenário marcado por cortes orçamentários, greves, falta de infraestrutura e disputas em torno do futuro da educação argentina. Entre discursos oficiais que anunciam melhorias econômicas e os relatos de professores e autoridades universitárias que enfrentam a crise diariamente, o filme reflete sobre a universidade como espaço de resistência, conhecimento e possibilidade de ascensão social. ",es:"Este documental, que sigue el recorrido diario de un estudiante hacia una universidad pública, atraviesa un panorama marcado por recortes presupuestarios, huelgas, falta de infraestructura y disputas sobre el futuro de la educación argentina. Entre discursos oficiales que anuncian mejoras económicas y testimonios de profesores y autoridades universitarias que enfrentan la crisis a diario, la película reflexiona sobre la universidad como un espacio de resistencia, conocimiento y posibilidad de progreso social."}, ytUrl:"1E0eaKjFJqg", photos:["/fotos/ESTAMOS1.jpg", "/fotos/ESTAMOS2.jpg","/fotos/ESTAMOS3.jpg","/fotos/ESTAMOS4.jpg"],
   },
   {
     id:"lav", title:"A Lavanderia", year:"2026", cat:"som",
@@ -46,7 +46,7 @@ const PROJECTS = [
     id:"ph", title:"Poco Heterodoxo", year:"2025", cat:"som",
     roles:["Dir. de Som","Sound Design"],
     desc:{pt:"Curta de ficção. Diretor de som e sound designer.",es:"Cortometraje de ficción. Director de sonido y sound designer."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    synopsis:{pt:"Num mundo onde a heteronormatividade é a exceção e não a regra, Josema está prestes a completar 18 anos.",es:"En un mundo donde la heteronormatividad es la excepción y no la regla, Josema está por cumplir 18."}, ytUrl:"MTvwNIXQRQo", photos:["/fotos/POCO1.jpg","/fotos/POCO2.jpg","/fotos/POCO3.jpg","/fotos/POCO4.jpg","/fotos/POCO5.jpg"],
   },
   {
     id:"ps", title:"Pequeña Simone", year:"2024", cat:"som",
