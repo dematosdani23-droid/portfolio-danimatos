@@ -81,7 +81,7 @@ const PROJECTS = [
     id:"hcn", title:"Homenagem Cine Noir", year:"2024", cat:"outros",
     roles:["Direção","Fotografia"],
     desc:{pt:"ensaio cinematográfico.",es:"Evento cinematográfico."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:["/fotos/NOIR1.jpg","/fotos/NOIR3.jpg","/fotos/NOIR4.jpg","/fotos/NOIR5.jpg","/fotos/NOIR6.jpg","/fotos/NOIR7.jpg","/fotos/NOIR8.jpg","/fotos/NOIR9.jpg","/fotos/NOIR10.jpg","/fotos/NOIR11.jpg","/fotos/NOIR12.jpg"],
+    synopsis:{pt:"",es:""}, ytUrl:"", photos:["/fotos/noir1.jpg","/fotos/noir3.jpg","/fotos/noir4.jpg","/fotos/noir5.jpg","/fotos/noir6.jpg","/fotos/noir7.jpg","/fotos/noir8.jpg","/fotos/noir9.jpg","/fotos/noir10.jpg","/fotos/noir11.jpg","/fotos/noir12.jpg"],
   },
   {
     id:"ese", title:"El Secreto de los Estradas", year:"2025", cat:"direcao",
