@@ -59,16 +59,7 @@ const PROJECTS = [
     id:"siah", title:"Palestras e Acervo Cacique Siã HuniKuin", year:"2026", cat:"producao",
     roles:["Arquivamento","Curadoria Digital"],
     desc:{pt:"Digitalização e curadoria de acervo histórico audiovisual indígena amazônico.",es:"Digitalización y curaduría de archivo histórico audiovisual indígena amazónico."},
-    synopsis:{pt:"Projeto realizado em parceria com o Cacique Siã, reconhecido como o primeiro cineasta indígena do Brasil. A iniciativa promoveu três palestras no Instituto Federal de Brasília (IFB) e na Universidade de Brasília (UnB) – Campus Planaltina, abordando a trajetória do cinema indígena, sua importância para a preservação da memória, da cultura e das narrativas dos povos originários. Os encontros proporcionaram um espaço de diálogo entre estudantes, educadores e representantes indígenas, fortalecendo a valorização da produção audiovisual indígena contemporânea.",es:"Proyecto realizado en colaboración con el Cacique Siã, reconocido como el primer cineasta indígena de Brasil. La iniciativa incluyó tres conferencias en el Instituto Federal de Brasília (IFB) y en la Universidad de Brasília (UnB) – Campus Planaltina, abordando la trayectoria del cine indígena y su importancia para la preservación de la memoria, la cultura y las narrativas de los pueblos originarios. Los encuentros promovieron un espacio de diálogo entre estudiantes, educadores y representantes indígenas, fortaleciendo la valorización de la producción audiovisual indígena contemporánea."}, ytUrl:"",  photos: [
-    "/fotos/JV7-40.jpg",
-    "/fotos/JV7-1.jpg",
-    "/fotos/JV7-18.jpg",
-    "/fotos/JV7-23.jpg",
-    "/fotos/JV7-28.jpg",
-    "/fotos/JV7-31.jpg",
-    "/fotos/JV7-33.jpg",
-    "/fotos/JV7-37.jpg"
-  ],
+    synopsis:{pt:"Projeto realizado em parceria com o Cacique Siã, reconhecido como o primeiro cineasta indígena do Brasil. A iniciativa promoveu três palestras no Instituto Federal de Brasília (IFB) e na Universidade de Brasília (UnB) – Campus Planaltina, abordando a trajetória do cinema indígena, sua importância para a preservação da memória, da cultura e das narrativas dos povos originários. Os encontros proporcionaram um espaço de diálogo entre estudantes, educadores e representantes indígenas, fortalecendo a valorização da produção audiovisual indígena contemporânea.",es:"Proyecto realizado en colaboración con el Cacique Siã, reconocido como el primer cineasta indígena de Brasil. La iniciativa incluyó tres conferencias en el Instituto Federal de Brasília (IFB) y en la Universidad de Brasília (UnB) – Campus Planaltina, abordando la trayectoria del cine indígena y su importancia para la preservación de la memoria, la cultura y las narrativas de los pueblos originarios. Los encuentros promovieron un espacio de diálogo entre estudiantes, educadores y representantes indígenas, fortaleciendo la valorización de la producción audiovisual indígena contemporánea."}, ytUrl:"",  photos: ["/fotos/JV7-40.jpg","/fotos/JV7-1.jpg","/fotos/JV7-18.jpg","/fotos/JV7-23.jpg","/fotos/JV7-28.jpg","/fotos/JV7-31.jpg","/fotos/JV7-33.jpg","/fotos/JV7-37.jpg"],
   },
 
   {
