@@ -19,12 +19,6 @@ const PROJECTS = [
     synopsis:{pt:"Danillo, Marina e Conter sairam das suas raizes para a mesma cidade, com três trajetórias diferentes de deslocamento. Onde a gente se encontra quando deixou pra trás o lugar de onde veio?",es:"Danillo, Marina y Conter dejaron sus raíces para ir a la misma ciudad, siguiendo tres caminos diferentes. ¿Dónde nos encontramos cuando dejamos atrás el lugar de donde venimos?"}, ytUrl:"1BRTiwk5n2I", photos:["/fotos/DMVE1.jpg", "/fotos/DMVE2.jpg"],
   },
   {
-    id:"ese", title:"El Secreto de los Estradas", year:"2025", cat:"direcao",
-    roles:["Direção","Edição","Dir. de Som"],
-    desc:{pt:"Curta de terror. Direção, edição e direção de som.",es:"Cortometraje de terror. Dirección, edición y dirección de sonido."},
-    synopsis:{pt:"Em busca de silêncio, um jovem se refugia em um apartamento vazio. Entre passos vindos do andar de cima, vozes distantes e sons que desafiam a lógica, sua tentativa de encontrar paz acaba revelando algo muito mais perturbador do que o próprio passado.",es:"En busca de silencio, un joven se refugia en un apartamento vacío. Entre pasos en el piso de arriba, voces lejanas y sonidos que desafían la lógica, su intento por encontrar la paz termina revelando algo mucho más perturbador que su propio pasado."}, ytUrl:"GHcos5H0YtM", photos:["/fotos/SDLE1.jpg", "/fotos/SDLE2.jpg", "/fotos/SDLE3.jpg"],
-  },
-  {
     id:"cds", title:"La Cita de Samer", year:"2025", cat:"direcao",
     roles:["Direção","Montagem","Sound Design"],
     desc:{pt:"Curta de ficção. Direção, montagem e sound design.",es:"Cortometraje de ficción. Dirección, montaje y sound design."},
@@ -45,7 +39,7 @@ const PROJECTS = [
   {
     id:"ph", title:"Poco Heterodoxo", year:"2025", cat:"som",
     roles:["Dir. de Som","Sound Design"],
-    desc:{pt:"Curta de ficção. Diretor de som e sound designer.",es:"Cortometraje de ficción. Director de sonido y sound designer."},
+    desc:{pt:"Curta de Comédia. Diretor de som e sound designer.",es:"Cortometraje de Comédia. Director de sonido y sound designer."},
     synopsis:{pt:"Num mundo onde a heteronormatividade é a exceção e não a regra, Josema está prestes a completar 18 anos.",es:"En un mundo donde la heteronormatividad es la excepción y no la regla, Josema está por cumplir 18."}, ytUrl:"MTvwNIXQRQo", photos:["/fotos/POCO1.jpg","/fotos/POCO2.jpg","/fotos/POCO3.jpg","/fotos/POCO4.jpg","/fotos/POCO5.jpg"],
   },
   {
@@ -62,10 +56,19 @@ const PROJECTS = [
 	ytUrl:"", photos:["/fotos/TURNO1.jpg","/fotos/TURNO2.jpg","/fotos/TURNO3.jpg","/fotos/TURNO4.jpg", "/fotos/TURNO5.jpg" ],
   },
   {
-    id:"siah", title:"Acervo Cacique Siã HuniKuin", year:"2026", cat:"producao",
+    id:"siah", title:"Palestras e Acervo Cacique Siã HuniKuin", year:"2026", cat:"producao",
     roles:["Arquivamento","Curadoria Digital"],
     desc:{pt:"Digitalização e curadoria de acervo histórico audiovisual indígena amazônico.",es:"Digitalización y curaduría de archivo histórico audiovisual indígena amazónico."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    synopsis:{pt:"Projeto realizado em parceria com o Cacique Siã, reconhecido como o primeiro cineasta indígena do Brasil. A iniciativa promoveu três palestras no Instituto Federal de Brasília (IFB) e na Universidade de Brasília (UnB) – Campus Planaltina, abordando a trajetória do cinema indígena, sua importância para a preservação da memória, da cultura e das narrativas dos povos originários. Os encontros proporcionaram um espaço de diálogo entre estudantes, educadores e representantes indígenas, fortalecendo a valorização da produção audiovisual indígena contemporânea.",es:"Proyecto realizado en colaboración con el Cacique Siã, reconocido como el primer cineasta indígena de Brasil. La iniciativa incluyó tres conferencias en el Instituto Federal de Brasília (IFB) y en la Universidad de Brasília (UnB) – Campus Planaltina, abordando la trayectoria del cine indígena y su importancia para la preservación de la memoria, la cultura y las narrativas de los pueblos originarios. Los encuentros promovieron un espacio de diálogo entre estudiantes, educadores y representantes indígenas, fortaleciendo la valorización de la producción audiovisual indígena contemporánea."}, ytUrl:"",  photos: [
+    "/fotos/JV7-40.jpg",
+    "/fotos/JV7-1.jpg",
+    "/fotos/JV7-18.jpg",
+    "/fotos/JV7-23.jpg",
+    "/fotos/JV7-28.jpg",
+    "/fotos/JV7-31.jpg",
+    "/fotos/JV7-33.jpg",
+    "/fotos/JV7-37.jpg"
+  ],
   },
 
   {
@@ -86,8 +89,14 @@ const PROJECTS = [
   {
     id:"hcn", title:"Homenagem Cine Noir", year:"2024", cat:"outros",
     roles:["Direção","Fotografia"],
-    desc:{pt:"Evento cinematográfico.",es:"Evento cinematográfico."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:[],
+    desc:{pt:"ensaio cinematográfico.",es:"Evento cinematográfico."},
+    synopsis:{pt:"",es:""}, ytUrl:"", photos:["/fotos/NOIR1.jpg","/fotos/NOIR3.jpg","/fotos/NOIR4.jpg","/fotos/NOIR5.jpg","/fotos/NOIR6.jpg","/fotos/NOIR7.jpg","/fotos/NOIR8.jpg","/fotos/NOIR9.jpg","/fotos/NOIR10.jpg","/fotos/NOIR11.jpg","/fotos/NOIR12.jpg"],
+  },
+  {
+    id:"ese", title:"El Secreto de los Estradas", year:"2025", cat:"direcao",
+    roles:["Direção","Edição","Dir. de Som"],
+    desc:{pt:"Curta de terror. Direção, edição e direção de som.",es:"Cortometraje de terror. Dirección, edición y dirección de sonido."},
+    synopsis:{pt:"Em busca de silêncio, um jovem se refugia em um apartamento vazio. Entre passos vindos do andar de cima, vozes distantes e sons que desafiam a lógica, sua tentativa de encontrar paz acaba revelando algo muito mais perturbador do que o próprio passado.",es:"En busca de silencio, un joven se refugia en un apartamento vacío. Entre pasos en el piso de arriba, voces lejanas y sonidos que desafían la lógica, su intento por encontrar la paz termina revelando algo mucho más perturbador que su propio pasado."}, ytUrl:"GHcos5H0YtM", photos:["/fotos/SDLE1.jpg", "/fotos/SDLE2.jpg", "/fotos/SDLE3.jpg"],
   },
 ];
 
