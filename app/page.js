@@ -81,7 +81,7 @@ const PROJECTS = [
     id:"hcn", title:"Homenagem Cine Noir", year:"2024", cat:"outros",
     roles:["Direção","Fotografia"],
     desc:{pt:"ensaio cinematográfico.",es:"Evento cinematográfico."},
-    synopsis:{pt:"",es:""}, ytUrl:"", photos:["/fotos/noir1.jpg","/fotos/noir3.jpg","/fotos/noir4.jpg","/fotos/noir5.jpg","/fotos/noir6.jpg","/fotos/noir7.jpg","/fotos/noir8.jpg","/fotos/noir9.jpg","/fotos/noir10.jpg","/fotos/noir11.jpg","/fotos/noir12.jpg"],
+    synopsis:{pt:"Ensaio em homenagem ao Cine Noir.",es:"Ensayo  en homenaje al Cine Noir."}, ytUrl:"", photos:["/fotos/Noir1.jpg","/fotos/Noir3.jpg","/fotos/Noir4.jpg","/fotos/Noir5.jpg","/fotos/Noir6.jpg","/fotos/Noir7.jpg","/fotos/Noir8.jpg","/fotos/Noir9.jpg","/fotos/Noir10.jpg","/fotos/Noir11.jpg","/fotos/Noir12.jpg"],
   },
   {
     id:"ese", title:"El Secreto de los Estradas", year:"2025", cat:"direcao",
@@ -96,7 +96,7 @@ const UI = {
     tag:"PORTFÓLIO AUDIOVISUAL",subtitle:"Cineasta · Diretor de Som · Produtor Cultural",
     cats:{todos:"Todos",direcao:"Direção",som:"Som",producao:"Produção",outros:"Outros"},
     roles:{"Direção":"Direção","Edição":"Edição","Produção":"Produção","Dir. de Som":"Dir. de Som","Microfonista":"Microfonista","Sound Design":"Sound Design","Montagem":"Montagem","Som Direto":"Som Direto","Arquivamento":"Arquivamento","Curadoria Digital":"Curadoria Digital","Co-Direção":"Co-Direção","Produção Executiva":"Produção Executiva","Projeção":"Projeção","Dir. de Fotografia":"Dir. de Fotografia","Fotografia":"Fotografia"},
-    bio:<>Cineasta amapaense formado em Artes Audiovisuais pela <b>Universidad Nacional de La Plata (UNLP)</b>, onde fundou a <b>Kinestesia Producciones Audiovisuales</b>. Atua entre Brasília e La Plata com ampla experiência em produção audiovisual, som direto, sound design e gestão de projetos culturais. Sua obra explora migração, identidade e fronteiras, articulando o cinema emergente <b>amazônico e afro-indígena</b> com colaborações internacionais.</>,
+    bio:<>Cineasta amapaense em formação em Artes Audiovisuais pela <b>Universidad Nacional de La Plata (UNLP)</b>, onde fundou a <b>Kinestesia Producciones Audiovisuales</b>. Atua entre Brasília e La Plata com ampla experiência em produção audiovisual, som direto, sound design e gestão de projetos culturais. Sua obra explora migração, identidade e fronteiras, articulando o cinema emergente <b>amazônico e afro-indígena</b> com colaborações internacionais.</>,
     services:[
       {icon:"🎬",title:"Direção & Fotografia",items:["Direção cinematográfica","Direção de fotografia (DoP)","Operação de câmera"]},
       {icon:"🎙️",title:"Som & Sound Design",items:["Som direto · boom · microfonagem","Sound design","Pós-produção de áudio","Mixagem e edição de diálogos"]},
